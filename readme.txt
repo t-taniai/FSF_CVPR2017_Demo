@@ -55,8 +55,8 @@ the data format is the same with KITTI's submission format, that is,
 
 Disparity image: 16 bit 1-channel png where intensities I = 256*disparity and I = 0 mean "invalid" disparity.
 Flow image     : 16 bit 3-channel png where intensities of RGB channels represent following values.
-                 R = 64 * u - 1^15
-                 G = 64 * v - 1^15
+                 R = 64 * u - 2^15
+                 G = 64 * v - 2^15
                  B = 1 if a pixel has a valid flow and 0 if invalid
 
 For other scenes (when "-saveAsKittiFormat 1"), the scaling factor of disparity is changed from 256 to 64.
