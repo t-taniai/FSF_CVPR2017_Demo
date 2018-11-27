@@ -15,7 +15,7 @@ We do not plan to release our original source code of the algorithm due to the l
 Note that the software will produce slighly different results than those reported in the paper
 due to a different feature tracking method used in the algorithm.
 When comparing results of our method on KITTI and Sintel dataset, please use the original results
-available from KITTI online leader board or from our project site (see Data section below).
+available from our project site (see Data section below).
 
 
 ---------
@@ -60,14 +60,16 @@ Flow image     : 16 bit 3-channel png where intensities of RGB channels represen
                  B = 1 if a pixel has a valid flow and 0 if invalid
 
 For other scenes (when "-saveAsKittiFormat 1"), the scaling factor of disparity is changed from 256 to 64.
-
+Example MATLAB scripts are included in the results data mentioned below.
 
 --------
 Data    :
 --------
 Please visit our project site (https://taniai.space/projects/cvpr17_fsf/) where you can find
-1) Results of our method as well as PRSM and OSF on Sintel dataset
-2) Ground truth binary motion segmentation mask of Sintel dataset.
+1) Results of our method on Sintel and KITTI dataset, as well as results of PRSM and OSF on Sintel.
+   Visualization videos of Sintel results by our method, PRSM, and OSF are also included in the archive.
+   The archive file also contains MATLAB scripts of our data format and notes on Sintel evaluations.
+2) Ground truth motion segmentation masks of Sintel dataset (our creation).
 
 Note that "cave_2" and "sleeping_1" in Sintel are excluded from evaluations
 because camera parameters K are not constant (due to zooming) in those scenes.
