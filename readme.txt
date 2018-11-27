@@ -48,6 +48,34 @@ timestamp.txt -- Running times of individual steps of the algorithm in each fram
                  Times for logging and saving data are excluded from time stamps.
 
 ---------
+Options  :
+---------
+Some important commandline options are explained below.
+
+General parameters
+   -datasetType    [string] {sintel,kitti,custom}
+   -datasetDir     [string] Path to the root directory of a dataset
+   -targetName     [string] 000000-000199 (kitti) or {alley_1,alley_2,...} (sintel)
+   -saveAsKittiFormat [int] 1: Save as KITTI format, 0: Save as common format
+   -debug             [int] 1: Enable debug mode (output visualization), 0: Disable debug mode
+   -vizSaveFlags      [int] Flags to output results of individual stages.
+   -vizOutputSep      [int] 1: Output visualization as separate image files, 0: Output concatenated images.
+See also demo.bat for examples.
+
+Stereo parameters
+   -ndisp             [int] Defines disparity range as [0, ndisp-1] at full scale.
+                            If ndisp < 0 for Sintel, try to get from Sintel/training/info/.../disp.txt
+   -sgmScale        [float] Image resolution rate at which SGM stereo is performed.
+
+Optical flow parameters
+    -sgmflowScale   [float] Image resolution rate at which SMG flow is performed.
+
+Segmentation parameters
+   -occThresh (tau_ncc)    [float] Threshold in (0, 1) for classifying TNCC values to FG and BG.
+   -segColorW (lambda_col) [float] Weight of color likelihood terms.
+
+
+---------
 Format   :
 ---------
 For KITTI scenes (when "-datasetType kitti" or "-saveAsKittiFormat 1"),
@@ -62,6 +90,7 @@ Flow image     : 16 bit 3-channel png where intensities of RGB channels represen
 For other scenes (when "-saveAsKittiFormat 1"), the scaling factor of disparity is changed from 256 to 64.
 Example MATLAB scripts are included in the results data mentioned below.
 
+
 --------
 Data    :
 --------
@@ -73,6 +102,7 @@ Please visit our project site (https://taniai.space/projects/cvpr17_fsf/) where 
 
 Note that "cave_2" and "sleeping_1" in Sintel are excluded from evaluations
 because camera parameters K are not constant (due to zooming) in those scenes.
+
 
 --------
 History :
