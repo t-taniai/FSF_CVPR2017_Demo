@@ -67,7 +67,7 @@ Data    :
 --------
 Please visit our project site (https://taniai.space/projects/cvpr17_fsf/) where you can find
 1) Results of our method as well as PRSM and OSF on Sintel dataset
-2) Ground truth binary motion segmentation mask.
+2) Ground truth binary motion segmentation mask of Sintel dataset.
 
 Note that "cave_2" and "sleeping_1" in Sintel are excluded from evaluations
 because camera parameters K are not constant (due to zooming) in those scenes.
