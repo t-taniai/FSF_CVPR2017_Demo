@@ -22,6 +22,7 @@ available from KITTI online leader board or from our project site (see Data sect
 Download :
 ---------
 You can download the binaries at https://github.com/t-taniai/FSF_CVPR2017_Demo/releases
+Note that this software requires a CPU with SSE intrinsics.
 
 
 ---------
